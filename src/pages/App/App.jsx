@@ -24,7 +24,7 @@ export default function App() {
             <Route path="/gallery" element={<GalleryPage user={user} />}></Route>
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
-            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/contact" element={<ContactPage user={user} />} />
           </Routes>
         </>
         :
