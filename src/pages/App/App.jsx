@@ -17,9 +17,6 @@ export default function App() {
     <main className="App">
       {user ?
         <>
-
-          <h1>STUDIO HSU</h1>
-          <h3>REAL ESTATE MEDIA</h3>
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
