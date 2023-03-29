@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const emailSchema = new Schema({
     name: { type: String },
     email: { type: String },
-    textBox: { type: String, required: true }
+    textBox: { type: String, required: true },
+    isRead: { type: Boolean, default: false }
 }, {
     timestamps: true,
     toJSON: {

@@ -1,5 +1,10 @@
-export default function EmailCard(email) {
+export default function EmailCard({ email }) {
     return (
-        <h1>Email Card</h1>
+        <div>
+            <h3>{email.name}</h3>
+            <h3>{email.email}</h3>
+            <h3>{email.textBox}</h3>
+            <hr />
+        </div>
     )
 }

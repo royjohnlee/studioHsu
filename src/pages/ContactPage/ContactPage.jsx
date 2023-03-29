@@ -49,11 +49,7 @@ export default function ContactPage({ user }) {
                     <button>Submit</button>
                 </div>
             </form>
-
-            <div>
-
-                {user.admin && { emailCards }}
-            </div>
+            {user.admin && <div>{emailCards}</div>}
         </div>
     );
 }
