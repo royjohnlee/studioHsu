@@ -1,4 +1,6 @@
+import EmailCard from "../../components/EmailCard/EmailCard";
 import { useState } from "react";
+import * as emailAPI from '../../utilities/email-api'
 
 export default function ContactPage({ user }) {
     const [formData, setFormData] = useState({
@@ -7,21 +9,36 @@ export default function ContactPage({ user }) {
         textBox: "",
     })
 
+    const [emails, setEmails] = useState([])
+
     function handleChange(evt) {
         setFormData({ ...formData, [evt.target.name]: evt.target.value })
     }
 
-    function handleAddContact(evt) {
+    async function handleAddContact(evt) {
         evt.preventDefault();
+        if (formData.textBox === "") return
+        const allEmail = emailAPI.addEmail(formData)
+        setFormData({
+            name: user.name,
+            email: user.email,
+            textBox: "",
+        })
+        setEmails(allEmail)
     }
+
+    const emailCards = emails.map(e => (
+        <EmailCard email={e} key={e._id} />
+    ))
 
     return (
         <div>
             <h1>ContactPage</h1>
-
             <form className="ContactForm" onSubmit={handleAddContact}>
                 <div>
                     <label htmlFor="ContactUs">Contact Us</label>
+                    <h3>name: {user.name}</h3>
+                    <h3>email: {user.email}</h3>
                     <input
                         type="text"
                         name="textBox"
@@ -31,6 +48,8 @@ export default function ContactPage({ user }) {
                     <button>Submit</button>
                 </div>
             </form>
+
+            {user.admin && { emailCards }}
         </div>
     );
 }
