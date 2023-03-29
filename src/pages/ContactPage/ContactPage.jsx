@@ -18,7 +18,8 @@ export default function ContactPage({ user }) {
     async function handleAddContact(evt) {
         evt.preventDefault();
         if (formData.textBox === "") return
-        const allEmail = emailAPI.addEmail(formData)
+        const allEmail = await emailAPI.addEmail(formData)
+        console.log(allEmail)
         setFormData({
             name: user.name,
             email: user.email,
