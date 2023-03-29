@@ -50,7 +50,10 @@ export default function ContactPage({ user }) {
                 </div>
             </form>
 
-            {user.admin && { emailCards }}
+            <div>
+
+                {user.admin && { emailCards }}
+            </div>
         </div>
     );
 }
