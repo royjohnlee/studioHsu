@@ -9,6 +9,7 @@ export default function ContactPage({ user }) {
         textBox: "",
         isRead: false,
     })
+
     const [emails, setEmails] = useState([])
 
 
@@ -40,7 +41,6 @@ export default function ContactPage({ user }) {
     }
 
     async function updateEmail(emailId, emailFormData) {
-        console.log("update")
         const updatedEmails = emails.map(function (e) {
             if (e._id === emailId) return emailFormData
             else return e
@@ -49,8 +49,6 @@ export default function ContactPage({ user }) {
 
         await emailAPI.updateEmail(emailId, emailFormData)
     }
-
-    useEffect(function () { console.log(`Text Box: ${formData.textBox} IsRead?: ${formData.isRead}`) }, [formData]);
 
     const emailCards = emails.map(e => (
         <EmailCard email={e} key={e._id} updateEmail={updateEmail} />
@@ -81,7 +79,6 @@ export default function ContactPage({ user }) {
                 </div>
             </form>
             {user.admin && <div>{emailCards}</div>}
-
         </div>
     );
 }

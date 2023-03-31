@@ -5,7 +5,6 @@ export default function EmailCard({ email, updateEmail }) {
     const [emailFormData, setEmailFormData] = useState({ ...email })
 
     function handleChange(emailID) {
-
         setEmailFormData({
             ...emailFormData,
             isRead: !emailFormData.isRead
@@ -13,8 +12,10 @@ export default function EmailCard({ email, updateEmail }) {
         updateEmail(emailID, emailFormData)
     }
 
-    useEffect(function () { console.log(`HI`) },);
 
+
+    console.log("HII", email.isRead
+    )
 
     return (
         <div>
@@ -25,7 +26,8 @@ export default function EmailCard({ email, updateEmail }) {
             <div>
                 <div>read?</div>
                 <input
-                    type="checkbox" name="isRead"
+                    type="checkbox"
+                    name="isRead"
                     checked={emailFormData.isRead}
                     onChange={() => handleChange(email._id)} />
             </div>
