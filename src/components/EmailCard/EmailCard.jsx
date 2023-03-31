@@ -1,7 +1,20 @@
-export default function EmailCard({ email }) {
-    function handleChangeIsReadCheckBox(evt) {
-        const val = evt.target.type === 'checkbox' ? evt.target.checked : evt.target.value;
+import { useState, useEffect } from "react";
+
+export default function EmailCard({ email, updateEmail }) {
+
+    const [emailFormData, setEmailFormData] = useState({ ...email })
+
+    function handleChange(emailID) {
+
+        setEmailFormData({
+            ...emailFormData,
+            isRead: !emailFormData.isRead
+        })
+        updateEmail(emailID, emailFormData)
     }
+
+    useEffect(function () { console.log(`HI`) },);
+
 
     return (
         <div>
@@ -12,9 +25,9 @@ export default function EmailCard({ email }) {
             <div>
                 <div>read?</div>
                 <input
-                    type="checkbox" name="isReadCheckbox"
-                    checked={email.isRead}
-                    onChange={handleChangeIsReadCheckBox} />
+                    type="checkbox" name="isRead"
+                    checked={emailFormData.isRead}
+                    onChange={() => handleChange(email._id)} />
             </div>
             <hr />
         </div>
