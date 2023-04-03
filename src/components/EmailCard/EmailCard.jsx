@@ -14,8 +14,8 @@ export default function EmailCard({ email, updateEmail }) {
 
 
 
-    console.log("HII", email.isRead
-    )
+    // console.log("HII", email.isRead
+    // )
 
     return (
         <div>
@@ -31,6 +31,7 @@ export default function EmailCard({ email, updateEmail }) {
                     checked={emailFormData.isRead}
                     onChange={() => handleChange(email._id)} />
             </div>
+
             <hr />
         </div>
     )

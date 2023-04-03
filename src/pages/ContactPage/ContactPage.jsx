@@ -1,6 +1,6 @@
 import EmailCard from "../../components/EmailCard/EmailCard";
 import { useState, useEffect } from "react";
-import * as emailAPI from '../../utilities/email-api'
+import * as emailAPI from '../../utilities/email-api';
 
 export default function ContactPage({ user }) {
     const [formData, setFormData] = useState({
