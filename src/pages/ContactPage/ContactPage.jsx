@@ -1,59 +1,41 @@
 import EmailCard from "../../components/EmailCard/EmailCard";
-import { useState, useEffect } from "react";
-import * as emailAPI from '../../utilities/email-api';
+import { useState } from "react";
+import * as emailAPI from '../../utilities/email-api'
 
 export default function ContactPage({ user }) {
-    const [formData, setFormData] = useState({
-        name: user.name,
-        email: user.email,
-        textBox: "",
-        isRead: false,
-    })
-
-    const [emails, setEmails] = useState([])
-
-
-    // const [emailToMap, setEmailToMap] = useState([...emails])
-
-    function handleChange(evt) {
-        setFormData({ ...formData, [evt.target.name]: evt.target.value })
-    }
-
-    // function filterEmail(filter) {
-    //     let filteredEmail = []
-    //     if (filter === "all") filteredEmail = emails.map(e => e)
-    //     if (filter === "read") filteredEmail = emails.filter((e) => e.isRead)
-    //     if (filter === "unread") filteredEmail = emails.filter((e) => !e.isRead)
-    //     setEmailToMap(filteredEmail)
-    // }
+    const [emailBody, setEmailBody] = useState('');
+    const [isRead, setIsRead] = useState(false);
+    const [emails, setEmails] = useState([]);
 
     async function handleAddContact(evt) {
         evt.preventDefault();
-        if (formData.textBox === "") return
-        const allEmail = await emailAPI.addEmail(formData)
-        setFormData({
+        if (emailBody === "") return;
+        const allEmail = await emailAPI.addEmail({
             name: user.name,
             email: user.email,
-            textBox: "",
-            isRead: false,
-        })
-        setEmails(allEmail)
+            textBox: emailBody,
+            isRead
+        });
+        setEmails(allEmail);
+        setEmailBody('');
+        setIsRead(false);
     }
 
-    async function updateEmail(emailId, emailFormData) {
-        const updatedEmails = emails.map(function (e) {
-            if (e._id === emailId) return emailFormData
-            else return e
-        })
-        setEmails(updatedEmails)
+    async function toggleRead(email) {
+        email.isRead = !email.isRead;
+        setEmails([...emails]);
+        await emailAPI.toggleRead(email);
+    }
 
-        await emailAPI.updateEmail(emailId, emailFormData)
+    async function handleDelete(id) {
+        await emailAPI.deleteEmail(id)
+        const filteredEmails = emails.filter(e => e._id !== id)
+        setEmails(filteredEmails)
     }
 
     const emailCards = emails.map(e => (
-        <EmailCard email={e} key={e._id} updateEmail={updateEmail} />
-    ))
-
+        <EmailCard email={e} key={e._id} toggleRead={toggleRead} handleDelete={handleDelete} />
+    ));
 
     return (
         <div>
@@ -70,10 +52,8 @@ export default function ContactPage({ user }) {
                     <h3>name: {user.name}</h3>
                     <h3>email: {user.email}</h3>
                     <input
-                        type="text"
-                        name="textBox"
-                        value={formData.textBox}
-                        onChange={handleChange}
+                        value={emailBody}
+                        onChange={evt => setEmailBody(evt.target.value)}
                     />
                     <button>Submit</button>
                 </div>

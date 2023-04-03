@@ -2,7 +2,8 @@ const Email = require('../../models/email')
 
 module.exports = {
     create,
-    update
+    update,
+    delete: deleteEmail
 }
 
 async function create(req, res) {
@@ -17,11 +18,22 @@ async function create(req, res) {
 
 async function update(req, res) {
     try {
-        console.log(req.body)
         const updateEmail = await Email.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true });
-        console.log("controller email: ", updateEmail)
+
         res.status(200).json(updateEmail);
     } catch (err) {
+        res.status(400).json(err);
+    }
+}
+
+async function deleteEmail(req, res) {
+    try {
+        const deletedEmail = await Email.findByIdAndDelete(req.param.id)
+        console.log(deletedEmail)
+
+        res.status(200).json(deletedEmail)
+    } catch (err) {
+        console.log(err)
         res.status(400).json(err);
     }
 }
