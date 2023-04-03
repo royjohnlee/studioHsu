@@ -28,8 +28,9 @@ async function update(req, res) {
 
 async function deleteEmail(req, res) {
     try {
-        const deletedEmail = await Email.findByIdAndDelete(req.param.id)
-        console.log(deletedEmail)
+
+        console.log(req.params.id)
+        const deletedEmail = await Email.findByIdAndDelete(req.params.id)
 
         res.status(200).json(deletedEmail)
     } catch (err) {
