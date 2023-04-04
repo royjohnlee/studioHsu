@@ -4,8 +4,7 @@ import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import GalleryPage from '../GalleryPage/GalleryPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import PricingPage from '../PricingPage/PricingPage';
 import ContactPage from '../ContactPage/ContactPage';
 import HomePage from '../HomePage/HomePage';
 import NavBar from '../../components/NavBar/NavBar';
@@ -22,8 +21,7 @@ export default function App() {
             {/* Route components in here */}
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/gallery" element={<GalleryPage user={user} />}></Route>
-            <Route path="/orders/new" element={<NewOrderPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
             <Route path="/contact" element={<ContactPage user={user} />} />
           </Routes>
         </>

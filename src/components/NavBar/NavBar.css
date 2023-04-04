@@ -1,0 +1,20 @@
+.Title-Picture {
+    width: 40%;
+}
+
+.navbar-list {
+    background-color: #E2D9D1;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+li:hover {
+    color: #F9B233;
+}

@@ -1,0 +1,31 @@
+h1 {
+    color: #F9B233;
+    font-size: 47px;
+    background: transparent;
+    border: 0;
+    margin-top: 10px;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+
+}
+
+
+
+.HomePage-description {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+
+
+img {
+    padding: 10px;
+    width: 80%;
+}

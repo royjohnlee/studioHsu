@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+<div align="center" id="banner">
+   <img width="150" alt="banner" src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/240607306_1666013586934567_7564167589232605578_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=r-uZ3YZyW6IAX998NaY&_nc_ht=scontent-lax3-1.xx&oh=00_AfAzfxSz4K_3eZ8EmaGZG5TQdVIyP-6vwAtu4qLfXitPvw&oe=64312CC9">
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center" id="header">
 
-## Available Scripts
+# StudioHsu
+**Created by [Roy John Lee](https://www.linkedin.com/in/roy-john-lee/)**
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+<div align="center" id="socialbuttons">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ | Roy  | Project Github
+| ------- | -------- |
+[![Portfolio Badge](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)](https://github.com/https://github.com/royjohnlee) | [![Portfolio Badge](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)](https://github.com/royjohnlee/studioHsu)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## App Title: StudioHsu
+A StudioHsu is a website that showcases high-quality photos of properties for sale or rent. The website may also include information about the photographer's services, pricing, and contact information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The main goal of a StudioHsu is to showcase the photographer's skills and help potential clients make informed decisions about hiring them. The website should have a clean, professional design that allows the photos to take center stage. It should be easy to navigate and provide visitors with all the information they need.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This website provides users with a convenient and accessible way to engage in sports betting from the comfort of their own homes. However, users should always gamble responsibly and be aware of the potential risks and consequences of betting.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##  Screenshots 📷
+ *Landing Page / Home Page*
+------------
 
-## Learn More
+<img src="https://imgur.com/a/e1BVUiz" width="400">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Gallery*
+------------
+<img src="" width="400">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ *Contact Page*
+------------
+<img src="" width="400">
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+ | Languages  | Frameworks & Libraries  | Databases| Tools |
+| -------- | --------- | -- | -- |
+| ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)<br> ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5) ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3) | ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react) ![JWT](https://img.shields.io/badge/-JSON_Web_Tokens-05122A?style=flat&logo=jsonwebtokens)| ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb) |  ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github) <br> ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio) ![Heroku](https://img.shields.io/badge/-Heroku-05122A?style=flat&logo=heroku)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##  Getting Started 📸
+----------------------
+| Heroku  |
+| -------- |
+https://studiohsu.herokuapp.com/
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Trello  |
+| -------- |
+https://trello.com/b/Xd3gq9lu/photohsulee
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Next Step
+------------
+- make a better photo and video showcases
+- add review feature to show happy clients
