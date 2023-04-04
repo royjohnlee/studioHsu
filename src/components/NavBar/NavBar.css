@@ -15,6 +15,6 @@
     text-align: center;
 }
 
-li:hover {
+.navbar-item:hover {
     color: #F9B233;
 }

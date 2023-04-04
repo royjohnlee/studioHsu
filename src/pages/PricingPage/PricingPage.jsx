@@ -2,31 +2,26 @@ import "./PricingPage.css";
 import { checkToken } from '../../utilities/users-service';
 
 export default function NewOrderPage() {
-  async function handleCheckToken() {
-    const expDate = await checkToken();
-    console.log(expDate);
-  }
-
   return (
     <>
-      <div className='PriceList'>
-        <h1>Pricing</h1>
+      <h2>PRICING AND BOOKING</h2>
+      <ul className='PriceList'>
         <div className='Price-Container'>
           <div className='Package-Container'>
-            <div>
-              <h2 className='Packages'>
-                Package A
-              </h2>
+            <h2 className='Packages'>
+              Package A
+            </h2>
+            <p>
+              Photo + Video (Includes drone video/photo)
+            </p>
+            <div className="">
               <p>
-                Photo + Video (Includes drone video/photo)
+                Starting at $450
               </p>
-            </div>
-            <div className='StartingAt'>
-              Starting at $450
             </div>
           </div>
         </div>
-
+        <hr />
         <div className='Price-Container'>
           <div className='Package-Container'>
             <div>
@@ -42,7 +37,7 @@ export default function NewOrderPage() {
             </div>
           </div>
         </div>
-
+        <hr />
         <div className='Price-Container'>
           <div className='Package-Container'>
             <div>
@@ -58,7 +53,7 @@ export default function NewOrderPage() {
             </div>
           </div>
         </div>
-
+        <hr />
         <div className='Price-Container'>
           <div className='Package-Container'>
             <div>
@@ -74,7 +69,7 @@ export default function NewOrderPage() {
             </div>
           </div>
         </div>
-
+        <hr />
         <div className='Price-Container'>
           <div className='Package-Container'>
             <div>
@@ -89,8 +84,9 @@ export default function NewOrderPage() {
               Starting at $450
             </div>
           </div>
+          <hr />
+          <h3>PRICE VARY DEPENDING ON SQUARE FOOTAGE</h3>
           <div className='square-footage-container'>
-            <h3>PRICE VARY DEPENDING ON SQUARE FOOTAGE</h3>
             <div className='square-footage-div'>
               <div>
                 0-1500 Sqft.
@@ -134,8 +130,7 @@ export default function NewOrderPage() {
           </div>
         </div>
 
-      </div>
-      <button onClick={handleCheckToken}>Check When My Login Expires</button>
+      </ul >
     </>
   );
 }

@@ -13,23 +13,23 @@ export default function NavBar({ user, setUser }) {
       <img src="https://i.imgur.com/B8rmeaQ.png" alt="Title" className="Title-Picture" />
       <nav>
         <ul className="navbar-list">
-          <li>
+          <li className="navbar-item">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="navbar-item">
             <Link to="/gallery">Gallery</Link>
           </li>
-          <li>
+          <li className="navbar-item">
             <Link to="/pricing">Pricing</Link>
           </li>
-          <li>
+          <li className="navbar-item">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
+          <li className="navbar-item">
             <span>Welcome, {user.name}</span>
           </li>
 
-          <li>
+          <li className="navbar-item">
             <Link to="" onClick={handleLogOut}>Log Out</Link>
           </li>
         </ul>
