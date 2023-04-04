@@ -1,0 +1,19 @@
+.ContactCard {
+    margin: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 10px;
+
+}
+
+.Submitted-info {
+    justify-content: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 10px;
+}

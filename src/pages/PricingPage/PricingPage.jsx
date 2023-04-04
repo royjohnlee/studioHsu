@@ -14,7 +14,7 @@ export default function NewOrderPage() {
             <p>
               Photo + Video (Includes drone video/photo)
             </p>
-            <div className="">
+            <div className="description-starting">
               <p>
                 Starting at $450
               </p>

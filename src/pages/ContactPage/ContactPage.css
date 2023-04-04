@@ -1,0 +1,25 @@
+.ContactForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.ContactForm-details {
+    justify-content: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 10px;
+}
+
+
+
+textarea {
+    font-size: 16px;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+
+}

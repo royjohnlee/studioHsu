@@ -22,7 +22,7 @@
 
 
 ## App Title: StudioHsu
-A StudioHsu is a website that showcases high-quality photos of properties for sale or rent. The website may also include information about the photographer's services, pricing, and contact information.
+A StudioHsu is a website that showcases high-quality photos of properties for sale or rent. The website also includes information about the photographer's services, pricing, and contact information.
 
 The main goal of a StudioHsu is to showcase the photographer's skills and help potential clients make informed decisions about hiring them. The website should have a clean, professional design that allows the photos to take center stage. It should be easy to navigate and provide visitors with all the information they need.
 
@@ -36,15 +36,15 @@ This website provides users with a convenient and accessible way to engage in sp
  *Landing Page / Home Page*
 ------------
 
-<img src="https://imgur.com/a/e1BVUiz" width="400">
+<img src="https://i.imgur.com/aUxlGBj.png" width="400">
 
 *Gallery*
 ------------
-<img src="" width="400">
+<img src="https://i.imgur.com/J7E0yNu.jpg" width="400">
 
  *Contact Page*
 ------------
-<img src="" width="400">
+<img src="https://i.imgur.com/VHPP8Zd.jpg" width="400">
 
 
 

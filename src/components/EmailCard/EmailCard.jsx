@@ -1,11 +1,12 @@
+import './EmailCard.css';
 export default function EmailCard({ email, toggleRead, handleDelete }) {
     return (
-        <div>
-            <h3>{email.name}</h3>
-            <h3>{email.email}</h3>
-            <p>{email.textBox}</p>
-            <h3>{email.createdAt}</h3>
-            <div>
+        <div className='ContactCard'>
+            <p>Their Name: {email.name}</p>
+            <p>Their Email: {email.email}</p>
+            <p className='Submitted-info'>{email.textBox}</p>
+            <p>{email.createdAt}</p>
+            <div >
                 <div>read?</div>
                 <input
                     type="checkbox"
@@ -13,7 +14,7 @@ export default function EmailCard({ email, toggleRead, handleDelete }) {
                     onChange={() => toggleRead(email)} />
             </div>
             <button onClick={() => handleDelete(email._id)}>Delete</button>
-            <hr />
+
         </div>
     )
 }

@@ -1,3 +1,4 @@
+import './ContactPage.css';
 import EmailCard from "../../components/EmailCard/EmailCard";
 import { useState } from "react";
 import * as emailAPI from '../../utilities/email-api'
@@ -39,21 +40,17 @@ export default function ContactPage({ user }) {
 
     return (
         <div>
-            <h1>ContactPage</h1>
-            {/* {user.admin && <div>
-                <button onClick={() => filterEmail("all")}>All</button>
-                <button onClick={() => filterEmail("read")}>Read</button>
-                <button onClick={() => filterEmail("unread")}>Unread</button>
-            </div>} */}
+            <h1 className='ContactUs'>Contact Us</h1>
 
             <form className="ContactForm" onSubmit={handleAddContact}>
-                <div>
-                    <label htmlFor="ContactUs">Contact Us</label>
-                    <h3>name: {user.name}</h3>
-                    <h3>email: {user.email}</h3>
-                    <input
+                <div className='ContactForm-details'>
+                    <h3>Your Name: {user.name}</h3>
+                    <h3>Your Email: {user.email}</h3>
+                    <textarea
                         value={emailBody}
-                        onChange={evt => setEmailBody(evt.target.value)}
+                        placeholder='Questions or Price Quote'
+                        onChange={evt => setEmailBody(evt.target.value)
+                        }
                     />
                     <button>Submit</button>
                 </div>
